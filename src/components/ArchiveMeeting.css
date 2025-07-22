@@ -1,0 +1,174 @@
+/* --- CORE LAYOUT --- */
+.archive-wrapper {
+  max-width: 780px;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  background: #f3f4f6;            /* gray‑100 */
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+.archive-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e40af;                /* blue‑800 */
+  margin-bottom: 1.8rem;
+}
+.archive-icon { width: 30px; height: 30px; stroke-width: 1.5; }
+
+/* --- CARD --- */
+.archive-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* --- MASTER HEADER (Old Meetings) --- */
+.archive-header {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2563eb;                /* blue‑600 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.archive-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.year-list { list-style: none; padding-left: 0; margin-top: 0.8rem; }
+
+/* --- YEAR TOGGLE --- */
+.year-toggle {
+  background: none;
+  border: none;
+  width: 100%;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #374151;               /* gray‑700 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.45rem 0;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+.year-toggle:hover,
+.year-toggle.active { color: #2563eb; }
+
+/* --- CATEGORY LIST & TOGGLE --- */
+.category-list {
+  padding-left: 1.4rem;
+  border-left: 2px solid #2563eb;
+  margin-top: 0.4rem;
+}
+.category-toggle {
+  background: none;
+  border: none;
+  width: 100%;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #4b5563;              /* gray‑700 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35rem 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.category-toggle:hover,
+.category-toggle.active { color: #2563eb; }
+
+/* --- ITEM LIST & CARD --- */
+.item-list {
+  padding-left: 1.3rem;
+  margin-top: 0.4rem;
+}
+.flat-list { border-left: 2px dashed #6b7280; } /* Resolutions / Minutes */
+.item-card {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.55rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+  color: #1f2937;
+}
+
+/* --- ICONS --- */
+.icon {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.8;
+}
+.arrow-icon {
+  transition: transform 0.3s ease;
+  color: #2563eb;
+}
+.arrow-icon.rotate { transform: rotate(90deg); }
+.arrow-icon.small { width: 16px; height: 16px; color: #6b7280; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 500px) {
+  .archive-wrapper { padding: 1rem; }
+  .archive-title { font-size: 1.6rem; }
+  .archive-header { font-size: 1.1rem; }
+  .year-toggle { font-size: 1rem; }
+  .category-toggle { font-size: 0.95rem; }
+}
+/* search box */
+.year-search {
+  margin-bottom: 1rem;
+}
+.year-search input {
+  width: 150px;
+  padding: 4px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* item card now becomes a flex row to place download btn at end */
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* download button */
+.dl-btn {
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  padding: 4px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.dl-btn:hover {
+  background: #1e40af;
+}
+/* download button */
+.dl-btn {
+  border:none;
+  color:#fff;
+  background:#2563eb;   /* blue */
+  padding:3px 6px;
+  border-radius:5px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+}
+.dl-btn:hover { opacity:0.85; }
+

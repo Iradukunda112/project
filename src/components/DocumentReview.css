@@ -1,0 +1,110 @@
+.review-wrapper {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-wrapper h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.document-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+input[type="file"] {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.submit-btn {
+  padding: 0.6rem 1.5rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+.file-preview {
+  margin-top: 1.5rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status.approved {
+  color: green;
+}
+
+.status.rejected {
+  color: red;
+}
+
+.status.pending {
+  color: orange;
+}
+
+.action-buttons {
+  margin-top: 1.5rem;
+}
+
+.remarks-box {
+  width: 100%;
+  min-height: 80px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.approve-btn,
+.reject-btn {
+  padding: 0.5rem 1.2rem;
+  margin-right: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.approve-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.reject-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.final-remarks {
+  margin-top: 1.5rem;
+  background-color: #eaeaea;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.new-document-alert {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.unread-indicator {
+  color: blue;
+  margin-left: 8px;
+}

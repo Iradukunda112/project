@@ -1,0 +1,182 @@
+/* Sidebar container */
+.sidebar {
+  height: 100vh;
+  background: linear-gradient(to bottom, #2193b0, #6dd5ed);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  transition: width 0.3s ease;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+.sidebar.expanded {
+  width: 220px;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+/* Header with avatar and toggle button */
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar__header {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Avatar */
+.sidebar__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.sidebar__avatar:hover {
+  transform: scale(1.1);
+}
+
+.sidebar.collapsed .sidebar__avatar {
+  width: 50px;
+  height: 50px;
+}
+
+/* Title */
+.sidebar__title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  margin-left: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar__title {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+/* Toggle button */
+.sidebar__toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: auto;
+}
+
+/* Position toggle button when expanded */
+.sidebar.expanded .sidebar__toggle {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+/* Navigation */
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Links */
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  color: #e0f7fa;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 15px; /* for smooth padding on hover */
+}
+
+.sidebar__link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding-left: 20px;
+}
+
+.sidebar__link--active {
+  background-color: #0d8ecf;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: inset 5px 0 0 0 #fff;
+  padding-left: 20px;
+  pointer-events: none;
+}
+
+/* Icons */
+.sidebar__icon {
+  font-size: 1.3rem;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.sidebar__link:hover .sidebar__icon {
+  transform: rotate(15deg);
+}
+
+/* Icon style when collapsed */
+.sidebar.collapsed .sidebar__icon {
+  margin-right: 0;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Labels */
+.sidebar__label {
+  white-space: nowrap;
+  transition: opacity 0.3s ease, width 0.3s ease;
+  overflow: hidden;
+}
+
+/* Hide labels when collapsed */
+.sidebar.collapsed .sidebar__label {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute; /* Remove label space */
+}
+
+/* Tooltip on hover when collapsed */
+.sidebar.collapsed .sidebar__link:hover .sidebar__label {
+  opacity: 1;
+  width: auto;
+  position: absolute;
+  left: 70px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 4px;
+  z-index: 10;
+  white-space: nowrap;
+  pointer-events: none;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
